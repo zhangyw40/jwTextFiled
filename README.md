@@ -1,9 +1,6 @@
 # OC_PLAYGROUND
-一：使用OC语言进行一些组件、功能的封装。
 
-(1)、jwTextFiled 功能封装
-
-jwTextFiled 类扩展，该扩展能够简单实现以下功能：
+jwTextFiled 框架简单实现以下功能：
 
 0、在使用的地方仅仅 #import "jwTextFiled.h" 即可；如何使用详见 jwTextFiled_Example ，博客说明请访问 http://www.jianshu.com/p/80ef2d47729d 。
 
@@ -23,7 +20,3 @@ jwProgressBar 是一个功能组件，该组件支持环形进度条的封装，
 
 0、实现了环形进度条与数字百分比的同步加载，根据进度的比例去动态的加载进度条。在 jwRingProgressBar.h 类内部实现了进度条实体部分与背景部分的类型定制。
 
-
-
-
-二：自己练习的小demo
