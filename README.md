@@ -5,7 +5,7 @@
 
 jwTextFiled 类扩展，该扩展能够简单实现以下功能：
 
-0、在使用的地方仅仅 #import "jwTextFiled.h" 即可。
+0、在使用的地方仅仅 #import "jwTextFiled.h" 即可；如何使用详见 jwTextFiled_Example ，博客说明请访问 http://www.jianshu.com/p/80ef2d47729d 。
 
 1、支持输入框类型为：用户名，密码，验证码，交易金额，身份证，银行卡，手机号，邮箱，信用卡有效期，信用卡安全码输入框正则校验，根据需要你可以自行扩展修改。    
 
