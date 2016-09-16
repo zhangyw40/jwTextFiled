@@ -196,7 +196,7 @@ typedef void(^AfterEnterBlock)(UITextField *TF,NSString *TF_STR);
  * 帮您解决问题。
  * 博客地址:
  * Email : 2795041895@qq.com
- * GitHub:
+ * GitHub:https://github.com/NIUXINGJIAN/OC_PLAYGROUND.git
  *
  *  做简单的封装，麻烦自己，方便别人
  *********************************************************************
