@@ -6,6 +6,7 @@
 //  Copyright © 2016年 Mac_NJW. All rights reserved.
 //
 
+
 #import <UIKit/UIKit.h>
 
 // 用户名长度 限制
@@ -97,14 +98,11 @@ typedef void(^AfterEnterBlock)(UITextField *TF,NSString *TF_STR);
  *  @param wars_Ary        校验失败提示语 （数组）
  *  @param null_Ary        空输入提示语 （数组）
  *  @param war_Type        提示类型 （枚举）
- *  @param keepar          保留参数 （字符串，暂未作用）
+ *  @param keepar          保留参数 （字符串，@"YES"就是开启错误定位）
  *
  *  @return 所有校验结果
  */
 - (BOOL)pollingCheckTextFiled:(NSArray*)tf_Ary isHaveBox:(ISHAVE_BOX_TYPE) ishave_box_Type haveBoxTitles:(NSArray*)wars_Ary nullWarTitles:(NSArray*)null_Ary withBoxType:(WARING_BOX_TYPE)war_Type keepara:(NSString*) keepar;
-
-
-
 
 
 /**
@@ -161,29 +159,22 @@ typedef void(^AfterEnterBlock)(UITextField *TF,NSString *TF_STR);
 
 
 
-
-/**
- *  使用说明 demo:
- // 测试输入框的输入约束效果
- UITextField * tf_1 = [[UITextField alloc] initWithFrame:CGRectMake(0, 100, K_WIDTH, 30)];
- [self.view addSubview:tf_1];
- tf_1.backgroundColor = [UIColor cyanColor];
- [tf_1 setDelegate:(id)tf_1];
+/*
  
- tf_1.tempBlock = ^(UITextField *TF, NSString *TF_STR) {
- NSLog(@"及时得到当前输入框的内容=========== %@ ",TF_STR);
+ *********************************************************************
+ *
+ * 🌟🌟🌟 新建交流QQ群：215901818 🌟🌟🌟
+ *
+ * 在您使用此组件的过程中如果出现bug请及时告知QQ群主，我会及时修复bug并
+ * 帮您解决问题。
+ * 博客地址:
+ * Email : 2795041895@qq.com
+ * GitHub:https://github.com/NIUXINGJIAN/OC_PLAYGROUND.git
+ *
+ *  做简单的封装，麻烦自己，方便别人
+ *********************************************************************
  
- if ([TF_STR length] > 6) {
- 
- [TF setBackgroundColor:[UIColor redColor]];
- }else{
- [TF setBackgroundColor:[UIColor cyanColor]];
- }
- };
- [tf_1 setTextFiledType:TEXTFIELD_TYPE_PAYBOX];//(金额 16)
  */
-
-
 
 
 
