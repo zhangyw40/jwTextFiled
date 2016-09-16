@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "jwProgressBar.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+   
+    jwRingProgressBar *jrpb = [[jwRingProgressBar alloc] initWithFrame:CGRectMake(50, 50, 50, 50)];
+    jrpb.percent = 0.98;
+    [self.view addSubview:jrpb];
+    
 }
 
 - (void)didReceiveMemoryWarning {

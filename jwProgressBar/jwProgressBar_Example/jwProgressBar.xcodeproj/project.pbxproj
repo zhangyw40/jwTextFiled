@@ -54,6 +54,7 @@
 		0400DE1B1D8C54AF00E06CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0400DE281D8C54C200E06CFE /* jwRingProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jwRingProgressBar.h; sourceTree = "<group>"; };
 		0400DE291D8C54C200E06CFE /* jwRingProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jwRingProgressBar.m; sourceTree = "<group>"; };
+		0400DE2B1D8C58C000E06CFE /* jwProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jwProgressBar.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +148,7 @@
 		0400DE271D8C54C200E06CFE /* jwProgressBar */ = {
 			isa = PBXGroup;
 			children = (
+				0400DE2B1D8C58C000E06CFE /* jwProgressBar.h */,
 				0400DE281D8C54C200E06CFE /* jwRingProgressBar.h */,
 				0400DE291D8C54C200E06CFE /* jwRingProgressBar.m */,
 			);
@@ -515,6 +517,7 @@
 				0400DE201D8C54AF00E06CFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0400DE211D8C54AF00E06CFE /* Build configuration list for PBXNativeTarget "jwProgressBarTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +526,7 @@
 				0400DE231D8C54AF00E06CFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0400DE241D8C54AF00E06CFE /* Build configuration list for PBXNativeTarget "jwProgressBarUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +535,7 @@
 				0400DE261D8C54AF00E06CFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
