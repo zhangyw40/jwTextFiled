@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		048AEF2F1D8BFDE900B3359C /* AutoAttentionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 048AEF291D8BFDE900B3359C /* AutoAttentionView.m */; };
+		048AEF301D8BFDE900B3359C /* UITextField+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 048AEF2C1D8BFDE900B3359C /* UITextField+Addtion.m */; };
+		048AEF311D8BFDE900B3359C /* ZLAlertDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 048AEF2E1D8BFDE900B3359C /* ZLAlertDialog.m */; };
 		04F8312C1D8B47B200BA8BA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F8312B1D8B47B200BA8BA9 /* main.m */; };
 		04F8312F1D8B47B200BA8BA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F8312E1D8B47B200BA8BA9 /* AppDelegate.m */; };
 		04F831321D8B47B200BA8BA9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F831311D8B47B200BA8BA9 /* ViewController.m */; };
@@ -15,9 +18,6 @@
 		04F8313A1D8B47B200BA8BA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F831381D8B47B200BA8BA9 /* LaunchScreen.storyboard */; };
 		04F831451D8B47B200BA8BA9 /* jwTextFiledTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F831441D8B47B200BA8BA9 /* jwTextFiledTests.m */; };
 		04F831501D8B47B200BA8BA9 /* jwTextFiledUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F8314F1D8B47B200BA8BA9 /* jwTextFiledUITests.m */; };
-		04F831671D8BC32400BA8BA9 /* AutoAttentionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F831601D8BC32400BA8BA9 /* AutoAttentionView.m */; };
-		04F831681D8BC32400BA8BA9 /* UITextField+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F831631D8BC32400BA8BA9 /* UITextField+Addtion.m */; };
-		04F831691D8BC32400BA8BA9 /* ZLAlertDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F831661D8BC32400BA8BA9 /* ZLAlertDialog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		048AEF281D8BFDE900B3359C /* AutoAttentionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoAttentionView.h; sourceTree = "<group>"; };
+		048AEF291D8BFDE900B3359C /* AutoAttentionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoAttentionView.m; sourceTree = "<group>"; };
+		048AEF2A1D8BFDE900B3359C /* jwMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jwMacro.h; sourceTree = "<group>"; };
+		048AEF2B1D8BFDE900B3359C /* UITextField+Addtion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Addtion.h"; sourceTree = "<group>"; };
+		048AEF2C1D8BFDE900B3359C /* UITextField+Addtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Addtion.m"; sourceTree = "<group>"; };
+		048AEF2D1D8BFDE900B3359C /* ZLAlertDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLAlertDialog.h; sourceTree = "<group>"; };
+		048AEF2E1D8BFDE900B3359C /* ZLAlertDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLAlertDialog.m; sourceTree = "<group>"; };
+		048AEF331D8BFE8200B3359C /* jwTextFiled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jwTextFiled.h; sourceTree = "<group>"; };
 		04F831271D8B47B100BA8BA9 /* jwTextFiled.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jwTextFiled.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F8312B1D8B47B200BA8BA9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04F8312D1D8B47B200BA8BA9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,13 +62,6 @@
 		04F8314B1D8B47B200BA8BA9 /* jwTextFiledUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jwTextFiledUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F8314F1D8B47B200BA8BA9 /* jwTextFiledUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jwTextFiledUITests.m; sourceTree = "<group>"; };
 		04F831511D8B47B200BA8BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04F8315F1D8BC32400BA8BA9 /* AutoAttentionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoAttentionView.h; sourceTree = "<group>"; };
-		04F831601D8BC32400BA8BA9 /* AutoAttentionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoAttentionView.m; sourceTree = "<group>"; };
-		04F831621D8BC32400BA8BA9 /* UITextField+Addtion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Addtion.h"; sourceTree = "<group>"; };
-		04F831631D8BC32400BA8BA9 /* UITextField+Addtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Addtion.m"; sourceTree = "<group>"; };
-		04F831651D8BC32400BA8BA9 /* ZLAlertDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLAlertDialog.h; sourceTree = "<group>"; };
-		04F831661D8BC32400BA8BA9 /* ZLAlertDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLAlertDialog.m; sourceTree = "<group>"; };
-		04F8316A1D8BC35F00BA8BA9 /* jwMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jwMacro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,40 +156,17 @@
 		04F8315D1D8BC32400BA8BA9 /* jwTextFiled */ = {
 			isa = PBXGroup;
 			children = (
-				04F8315E1D8BC32400BA8BA9 /* AutoAttentionView */,
-				04F831611D8BC32400BA8BA9 /* jwTextFiledType */,
-				04F831641D8BC32400BA8BA9 /* ZLAlertDailog */,
+				048AEF331D8BFE8200B3359C /* jwTextFiled.h */,
+				048AEF2A1D8BFDE900B3359C /* jwMacro.h */,
+				048AEF2B1D8BFDE900B3359C /* UITextField+Addtion.h */,
+				048AEF2C1D8BFDE900B3359C /* UITextField+Addtion.m */,
+				048AEF281D8BFDE900B3359C /* AutoAttentionView.h */,
+				048AEF291D8BFDE900B3359C /* AutoAttentionView.m */,
+				048AEF2D1D8BFDE900B3359C /* ZLAlertDialog.h */,
+				048AEF2E1D8BFDE900B3359C /* ZLAlertDialog.m */,
 			);
 			name = jwTextFiled;
 			path = jwTextFiled/jwTextFiled;
-			sourceTree = "<group>";
-		};
-		04F8315E1D8BC32400BA8BA9 /* AutoAttentionView */ = {
-			isa = PBXGroup;
-			children = (
-				04F8315F1D8BC32400BA8BA9 /* AutoAttentionView.h */,
-				04F831601D8BC32400BA8BA9 /* AutoAttentionView.m */,
-			);
-			path = AutoAttentionView;
-			sourceTree = "<group>";
-		};
-		04F831611D8BC32400BA8BA9 /* jwTextFiledType */ = {
-			isa = PBXGroup;
-			children = (
-				04F831621D8BC32400BA8BA9 /* UITextField+Addtion.h */,
-				04F831631D8BC32400BA8BA9 /* UITextField+Addtion.m */,
-				04F8316A1D8BC35F00BA8BA9 /* jwMacro.h */,
-			);
-			path = jwTextFiledType;
-			sourceTree = "<group>";
-		};
-		04F831641D8BC32400BA8BA9 /* ZLAlertDailog */ = {
-			isa = PBXGroup;
-			children = (
-				04F831651D8BC32400BA8BA9 /* ZLAlertDialog.h */,
-				04F831661D8BC32400BA8BA9 /* ZLAlertDialog.m */,
-			);
-			path = ZLAlertDailog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,12 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04F831671D8BC32400BA8BA9 /* AutoAttentionView.m in Sources */,
+				048AEF2F1D8BFDE900B3359C /* AutoAttentionView.m in Sources */,
 				04F831321D8B47B200BA8BA9 /* ViewController.m in Sources */,
 				04F8312F1D8B47B200BA8BA9 /* AppDelegate.m in Sources */,
 				04F8312C1D8B47B200BA8BA9 /* main.m in Sources */,
-				04F831691D8BC32400BA8BA9 /* ZLAlertDialog.m in Sources */,
-				04F831681D8BC32400BA8BA9 /* UITextField+Addtion.m in Sources */,
+				048AEF311D8BFDE900B3359C /* ZLAlertDialog.m in Sources */,
+				048AEF301D8BFDE900B3359C /* UITextField+Addtion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

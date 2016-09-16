@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UITextField+Addtion.h"
+#import "jwTextFiled.h"
 
 @interface ViewController ()<UITextFieldDelegate>
 {
@@ -41,13 +41,13 @@
             // 用户名
             if (TF == _use_tf) {
                 
-                NSLog(@"\n\n 输入是== %@\n",TF_STR);
+                NSLog(@"\n\n 用户名输入框，及时输入的检测是 %@\n",TF_STR);
                 
             }
             // 身份证号
             if (TF == _id_tf) {
                 
-                NSLog(@"身份证输入款，及时输入的检测是 %@",TF_STR);
+                NSLog(@"\n\n身份证输入框，及时输入的检测是 %@\n",TF_STR);
             }
         };
     }
@@ -58,8 +58,14 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     // 轮询校验
     // 如果要开启定位功能，最后一个参数为 @"YES"
-    [_use_tf pollingCheckTextFiled:_tfs_ary isHaveBox:ISHAVE_BOX_TYPE_YES haveBoxTitles:_titles_Ary nullWarTitles:_niltfs_Ary withBoxType:WARING_BOX_TYPE_BLACKBX keepara:@"YES"];
+   BOOL is_ok = [_use_tf pollingCheckTextFiled:_tfs_ary isHaveBox:ISHAVE_BOX_TYPE_YES haveBoxTitles:_titles_Ary nullWarTitles:_niltfs_Ary withBoxType:WARING_BOX_TYPE_BLACKBX keepara:@"YES"];
     
+    if (is_ok) {
+        NSLog(@"\n\n所有的输入框都校验通过\n");
+        
+    }else{
+        NSLog(@"\n\n有输入框没有通过校验\n");
+    }
 }
 
 - (void)didReceiveMemoryWarning {

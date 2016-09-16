@@ -105,9 +105,6 @@ typedef void(^AfterEnterBlock)(UITextField *TF,NSString *TF_STR);
 - (BOOL)pollingCheckTextFiled:(NSArray*)tf_Ary isHaveBox:(ISHAVE_BOX_TYPE) ishave_box_Type haveBoxTitles:(NSArray*)wars_Ary nullWarTitles:(NSArray*)null_Ary withBoxType:(WARING_BOX_TYPE)war_Type keepara:(NSString*) keepar;
 
 
-
-
-
 /**
  *  扩充方法，一般用不上（暂时未实现,先注释掉，后期修订）
  *
