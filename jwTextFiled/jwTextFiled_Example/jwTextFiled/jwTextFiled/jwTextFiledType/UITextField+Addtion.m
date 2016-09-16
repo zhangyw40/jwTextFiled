@@ -337,6 +337,11 @@
         
     }
     
+    // 回收键盘
+    for (UITextField *tf in tf_Ary) {
+        [tf resignFirstResponder];
+    }
+    
     // 轮询结束，可以继续
     return YES;
     

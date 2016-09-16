@@ -57,7 +57,8 @@
 // 点击空白处进行校验
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     // 轮询校验
-    [_use_tf pollingCheckTextFiled:_tfs_ary isHaveBox:ISHAVE_BOX_TYPE_YES haveBoxTitles:_titles_Ary nullWarTitles:_niltfs_Ary withBoxType:WARING_BOX_TYPE_BLACKBX keepara:nil];
+    // 如果要开启定位功能，最后一个参数为 @"YES"
+    [_use_tf pollingCheckTextFiled:_tfs_ary isHaveBox:ISHAVE_BOX_TYPE_YES haveBoxTitles:_titles_Ary nullWarTitles:_niltfs_Ary withBoxType:WARING_BOX_TYPE_BLACKBX keepara:@"YES"];
     
 }
 

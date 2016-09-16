@@ -162,30 +162,6 @@ typedef void(^AfterEnterBlock)(UITextField *TF,NSString *TF_STR);
 
 
 
-
-/**
- *  使用说明 demo:
- // 测试输入框的输入约束效果
- UITextField * tf_1 = [[UITextField alloc] initWithFrame:CGRectMake(0, 100, K_WIDTH, 30)];
- [self.view addSubview:tf_1];
- tf_1.backgroundColor = [UIColor cyanColor];
- [tf_1 setDelegate:(id)tf_1];
- 
- tf_1.tempBlock = ^(UITextField *TF, NSString *TF_STR) {
- NSLog(@"及时得到当前输入框的内容=========== %@ ",TF_STR);
- 
- if ([TF_STR length] > 6) {
- 
- [TF setBackgroundColor:[UIColor redColor]];
- }else{
- [TF setBackgroundColor:[UIColor cyanColor]];
- }
- };
- [tf_1 setTextFiledType:TEXTFIELD_TYPE_PAYBOX];//(金额 16)
- */
-
-
-
 /*
  
  *********************************************************************
