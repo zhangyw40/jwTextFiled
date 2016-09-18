@@ -61,12 +61,11 @@
     // 如果要开启定位功能，最后一个参数为 @"YES"
    BOOL is_ok = [_use_tf pollingCheckTextFiled:_tfs_ary isHaveBox:ISHAVE_BOX_TYPE_YES haveBoxTitles:_titles_Ary nullWarTitles:_niltfs_Ary withBoxType:WARING_BOX_TYPE_BLACKBX keepara:@"YES"];
     
-    if (is_ok) {
+    if (!is_ok) {
         NSLog(@"\n\n所有的输入框都校验通过\n");
         
         AddBankCardViewController *addbank = [AppDelegate receiveClassObjcParm1:@"AddBankCardViewController" parm2:K_ADD_BANKCARD_VC_ID];
-        [self.navigationController pushViewController:addbank animated:YES];
-        
+        [self showDetailViewController:addbank sender:self];
         
     }else{
         NSLog(@"\n\n有输入框没有通过校验\n");
