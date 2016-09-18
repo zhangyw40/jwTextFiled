@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "jwTextFiled.h"
+#import "AddBankCardViewController.h"
 
 @interface ViewController ()<UITextFieldDelegate>
 {
@@ -62,6 +63,10 @@
     
     if (is_ok) {
         NSLog(@"\n\n所有的输入框都校验通过\n");
+        
+        AddBankCardViewController *addbank = [AppDelegate receiveClassObjcParm1:@"AddBankCardViewController" parm2:K_ADD_BANKCARD_VC_ID];
+        [self.navigationController pushViewController:addbank animated:YES];
+        
         
     }else{
         NSLog(@"\n\n有输入框没有通过校验\n");

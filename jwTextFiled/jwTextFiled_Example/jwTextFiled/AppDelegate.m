@@ -42,6 +42,24 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark——————— 辅助加载storyboard函数
++ (id)receiveClassObjcParm1:(NSString *)className parm2:(NSString*)classID{
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:className bundle:[NSBundle mainBundle]];
+    
+    Class myClass = NSClassFromString(className);
+    
+    UIViewController * tempController = [storyboard instantiateViewControllerWithIdentifier:classID];
+    
+    if ([tempController isKindOfClass:myClass]) {
+        return tempController;
+    }
+    
+    return nil;
+    
+}
+
+
 @end
 
 

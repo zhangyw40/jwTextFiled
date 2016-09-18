@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
++ (id)receiveClassObjcParm1:(NSString *)className parm2:(NSString*)classID;
 
 @end
 

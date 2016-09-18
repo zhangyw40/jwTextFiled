@@ -18,6 +18,8 @@
 		04F8313A1D8B47B200BA8BA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F831381D8B47B200BA8BA9 /* LaunchScreen.storyboard */; };
 		04F831451D8B47B200BA8BA9 /* jwTextFiledTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F831441D8B47B200BA8BA9 /* jwTextFiledTests.m */; };
 		04F831501D8B47B200BA8BA9 /* jwTextFiledUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F8314F1D8B47B200BA8BA9 /* jwTextFiledUITests.m */; };
+		A9C9D65F1D8EAED000B30D18 /* AddBankCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C9D65D1D8EAED000B30D18 /* AddBankCardViewController.m */; };
+		A9C9D6601D8EAED000B30D18 /* AddBankCardViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C9D65E1D8EAED000B30D18 /* AddBankCardViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,9 @@
 		04F8314B1D8B47B200BA8BA9 /* jwTextFiledUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jwTextFiledUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F8314F1D8B47B200BA8BA9 /* jwTextFiledUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jwTextFiledUITests.m; sourceTree = "<group>"; };
 		04F831511D8B47B200BA8BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9C9D65C1D8EAED000B30D18 /* AddBankCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBankCardViewController.h; sourceTree = "<group>"; };
+		A9C9D65D1D8EAED000B30D18 /* AddBankCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBankCardViewController.m; sourceTree = "<group>"; };
+		A9C9D65E1D8EAED000B30D18 /* AddBankCardViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddBankCardViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +122,9 @@
 				04F8312E1D8B47B200BA8BA9 /* AppDelegate.m */,
 				04F831301D8B47B200BA8BA9 /* ViewController.h */,
 				04F831311D8B47B200BA8BA9 /* ViewController.m */,
+				A9C9D65C1D8EAED000B30D18 /* AddBankCardViewController.h */,
+				A9C9D65D1D8EAED000B30D18 /* AddBankCardViewController.m */,
+				A9C9D65E1D8EAED000B30D18 /* AddBankCardViewController.storyboard */,
 				04F831331D8B47B200BA8BA9 /* Main.storyboard */,
 				04F831361D8B47B200BA8BA9 /* Assets.xcassets */,
 				04F831381D8B47B200BA8BA9 /* LaunchScreen.storyboard */,
@@ -276,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F8313A1D8B47B200BA8BA9 /* LaunchScreen.storyboard in Resources */,
+				A9C9D6601D8EAED000B30D18 /* AddBankCardViewController.storyboard in Resources */,
 				04F831371D8B47B200BA8BA9 /* Assets.xcassets in Resources */,
 				04F831351D8B47B200BA8BA9 /* Main.storyboard in Resources */,
 			);
@@ -308,6 +317,7 @@
 				04F8312C1D8B47B200BA8BA9 /* main.m in Sources */,
 				048AEF311D8BFDE900B3359C /* ZLAlertDialog.m in Sources */,
 				048AEF301D8BFDE900B3359C /* UITextField+Addtion.m in Sources */,
+				A9C9D65F1D8EAED000B30D18 /* AddBankCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
