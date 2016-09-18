@@ -28,10 +28,10 @@
     _niltfs_Ary = @[@"用户名不能为空",@"身份证不能为空",@"银行卡不能为空",@"金额不能为空"];
     
     //设置约束样式
-    [_use_tf setTextFiledType:TEXTFIELD_TYPE_LOGIN_U];
-    [_id_tf setTextFiledType:TEXTFIELD_TYPE_IDCARD];
-    [_bankcard_tf setTextFiledType:TEXTFIELD_TYPE_BANKRD];
-    [_pay_tf setTextFiledType:TEXTFIELD_TYPE_PAYBOX];
+    [_use_tf jwTextFiledType:TEXTFIELD_TYPE_LOGIN_U];
+    [_id_tf jwTextFiledType:TEXTFIELD_TYPE_IDCARD];
+    [_bankcard_tf jwTextFiledType:TEXTFIELD_TYPE_BANKRD];
+    [_pay_tf jwTextFiledType:TEXTFIELD_TYPE_PAYBOX];
     
     // 及时检测
     for (UITextField *TF in _tfs_ary) {

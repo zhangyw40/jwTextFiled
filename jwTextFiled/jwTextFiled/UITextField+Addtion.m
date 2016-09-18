@@ -36,7 +36,7 @@
 
 
 // 外部实现调用
--(void)setTextFiledType:(TEXTFIELD_TYPE)type{
+-(void)jwTextFiledType:(TEXTFIELD_TYPE)type{
     
     // 设置动态属性
     [self setTextFiled_Type:type];

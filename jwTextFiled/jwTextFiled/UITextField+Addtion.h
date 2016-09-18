@@ -88,7 +88,7 @@ typedef void(^AfterEnterBlock)(UITextField *TF,NSString *TF_STR);
 @property (nonatomic,copy)AfterEnterBlock tempBlock;
 
 // 内部实现对不同输入框的长度的限制 (外部调用设置)
-- (void)setTextFiledType:(TEXTFIELD_TYPE)type;
+- (void)jwTextFiledType:(TEXTFIELD_TYPE)type;
 
 /**
  *  轮询检验方法
