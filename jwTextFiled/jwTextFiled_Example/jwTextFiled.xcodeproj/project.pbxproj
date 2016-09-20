@@ -18,8 +18,14 @@
 		04F8313A1D8B47B200BA8BA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F831381D8B47B200BA8BA9 /* LaunchScreen.storyboard */; };
 		04F831451D8B47B200BA8BA9 /* jwTextFiledTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F831441D8B47B200BA8BA9 /* jwTextFiledTests.m */; };
 		04F831501D8B47B200BA8BA9 /* jwTextFiledUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F8314F1D8B47B200BA8BA9 /* jwTextFiledUITests.m */; };
+		681C1C94BDC201CD88FAB2E2 /* libPods-jwTextFiledUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7A2B56D43DC96C4C3F4277 /* libPods-jwTextFiledUITests.a */; };
+		9B415F44D956E2E160DF2FB3 /* libPods-jwTextFiled.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC03E87FA50ABEE48BD0AE8 /* libPods-jwTextFiled.a */; };
+		A957BCF31D912BF600D1DB79 /* CdView.m in Sources */ = {isa = PBXBuildFile; fileRef = A957BCF21D912BF600D1DB79 /* CdView.m */; };
+		A957BCF61D912C1600D1DB79 /* UILabel+jwExten.m in Sources */ = {isa = PBXBuildFile; fileRef = A957BCF51D912C1600D1DB79 /* UILabel+jwExten.m */; };
 		A9C9D65F1D8EAED000B30D18 /* AddBankCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C9D65D1D8EAED000B30D18 /* AddBankCardViewController.m */; };
 		A9C9D6601D8EAED000B30D18 /* AddBankCardViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C9D65E1D8EAED000B30D18 /* AddBankCardViewController.storyboard */; };
+		A9E784851D9004A900F87D4B /* UIColor+jwHex.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E784841D9004A900F87D4B /* UIColor+jwHex.m */; };
+		ED7412D898823AEF7325B93B /* libPods-jwTextFiledTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE404A97A3AF151A07607EA1 /* libPods-jwTextFiledTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +48,6 @@
 /* Begin PBXFileReference section */
 		048AEF281D8BFDE900B3359C /* AutoAttentionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoAttentionView.h; sourceTree = "<group>"; };
 		048AEF291D8BFDE900B3359C /* AutoAttentionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoAttentionView.m; sourceTree = "<group>"; };
-		048AEF2A1D8BFDE900B3359C /* jwMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jwMacro.h; sourceTree = "<group>"; };
 		048AEF2B1D8BFDE900B3359C /* UITextField+Addtion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Addtion.h"; sourceTree = "<group>"; };
 		048AEF2C1D8BFDE900B3359C /* UITextField+Addtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Addtion.m"; sourceTree = "<group>"; };
 		048AEF2D1D8BFDE900B3359C /* ZLAlertDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLAlertDialog.h; sourceTree = "<group>"; };
@@ -64,9 +69,34 @@
 		04F8314B1D8B47B200BA8BA9 /* jwTextFiledUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jwTextFiledUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F8314F1D8B47B200BA8BA9 /* jwTextFiledUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jwTextFiledUITests.m; sourceTree = "<group>"; };
 		04F831511D8B47B200BA8BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21D7D38269ED3498F7B96847 /* Pods-jwTextFiledUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jwTextFiledUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-jwTextFiledUITests/Pods-jwTextFiledUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2BC03E87FA50ABEE48BD0AE8 /* libPods-jwTextFiled.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-jwTextFiled.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C320A8AE26184367036CB1A /* Pods-jwTextFiledTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jwTextFiledTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jwTextFiledTests/Pods-jwTextFiledTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3F7A2B56D43DC96C4C3F4277 /* libPods-jwTextFiledUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-jwTextFiledUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		483EB1EC8648D8D8E8470D82 /* Pods-jwTextFiledUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jwTextFiledUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jwTextFiledUITests/Pods-jwTextFiledUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5ED9694ADD8A7618808AC772 /* Pods-jwTextFiled.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jwTextFiled.release.xcconfig"; path = "Pods/Target Support Files/Pods-jwTextFiled/Pods-jwTextFiled.release.xcconfig"; sourceTree = "<group>"; };
+		689573C42B34DB2FED6ADF72 /* Pods-jwTextFiledTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jwTextFiledTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-jwTextFiledTests/Pods-jwTextFiledTests.release.xcconfig"; sourceTree = "<group>"; };
+		A957BCF11D912BF600D1DB79 /* CdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CdView.h; sourceTree = "<group>"; };
+		A957BCF21D912BF600D1DB79 /* CdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CdView.m; sourceTree = "<group>"; };
+		A957BCF41D912C1600D1DB79 /* UILabel+jwExten.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+jwExten.h"; sourceTree = "<group>"; };
+		A957BCF51D912C1600D1DB79 /* UILabel+jwExten.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+jwExten.m"; sourceTree = "<group>"; };
 		A9C9D65C1D8EAED000B30D18 /* AddBankCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBankCardViewController.h; sourceTree = "<group>"; };
 		A9C9D65D1D8EAED000B30D18 /* AddBankCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBankCardViewController.m; sourceTree = "<group>"; };
 		A9C9D65E1D8EAED000B30D18 /* AddBankCardViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddBankCardViewController.storyboard; sourceTree = "<group>"; };
+		A9E784791D9004A900F87D4B /* jw3RdMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jw3RdMacro.h; sourceTree = "<group>"; };
+		A9E7847A1D9004A900F87D4B /* jwColorMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jwColorMacro.h; sourceTree = "<group>"; };
+		A9E7847B1D9004A900F87D4B /* jwDeveceMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jwDeveceMacro.h; sourceTree = "<group>"; };
+		A9E7847C1D9004A900F87D4B /* jwFontMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jwFontMacro.h; sourceTree = "<group>"; };
+		A9E7847D1D9004A900F87D4B /* jwFrameMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jwFrameMacro.h; sourceTree = "<group>"; };
+		A9E7847E1D9004A900F87D4B /* jwMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jwMacro.h; sourceTree = "<group>"; };
+		A9E7847F1D9004A900F87D4B /* jwNetMacror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jwNetMacror.h; sourceTree = "<group>"; };
+		A9E784801D9004A900F87D4B /* jwTagMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jwTagMacro.h; sourceTree = "<group>"; };
+		A9E784811D9004A900F87D4B /* jwUiMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jwUiMacro.h; sourceTree = "<group>"; };
+		A9E784821D9004A900F87D4B /* jwUnitilsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jwUnitilsMacro.h; sourceTree = "<group>"; };
+		A9E784831D9004A900F87D4B /* UIColor+jwHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+jwHex.h"; sourceTree = "<group>"; };
+		A9E784841D9004A900F87D4B /* UIColor+jwHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+jwHex.m"; sourceTree = "<group>"; };
+		AE404A97A3AF151A07607EA1 /* libPods-jwTextFiledTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-jwTextFiledTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F27172007B4E9CEF31F019AA /* Pods-jwTextFiled.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jwTextFiled.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jwTextFiled/Pods-jwTextFiled.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B415F44D956E2E160DF2FB3 /* libPods-jwTextFiled.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED7412D898823AEF7325B93B /* libPods-jwTextFiledTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				681C1C94BDC201CD88FAB2E2 /* libPods-jwTextFiledUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,11 +130,14 @@
 		04F8311E1D8B47B100BA8BA9 = {
 			isa = PBXGroup;
 			children = (
+				A9E784781D9004A900F87D4B /* jwMacro */,
 				04F8315D1D8BC32400BA8BA9 /* jwTextFiled */,
 				04F831291D8B47B200BA8BA9 /* jwTextFiled_Example */,
 				04F831431D8B47B200BA8BA9 /* jwTextFiledTests */,
 				04F8314E1D8B47B200BA8BA9 /* jwTextFiledUITests */,
 				04F831281D8B47B100BA8BA9 /* Products */,
+				425852AB2F8CBA003427C743 /* Pods */,
+				AEE9A03BCD809532E13223EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,16 +201,61 @@
 			isa = PBXGroup;
 			children = (
 				048AEF331D8BFE8200B3359C /* jwTextFiled.h */,
-				048AEF2A1D8BFDE900B3359C /* jwMacro.h */,
 				048AEF2B1D8BFDE900B3359C /* UITextField+Addtion.h */,
 				048AEF2C1D8BFDE900B3359C /* UITextField+Addtion.m */,
 				048AEF281D8BFDE900B3359C /* AutoAttentionView.h */,
 				048AEF291D8BFDE900B3359C /* AutoAttentionView.m */,
 				048AEF2D1D8BFDE900B3359C /* ZLAlertDialog.h */,
 				048AEF2E1D8BFDE900B3359C /* ZLAlertDialog.m */,
+				A957BCF11D912BF600D1DB79 /* CdView.h */,
+				A957BCF21D912BF600D1DB79 /* CdView.m */,
+				A957BCF41D912C1600D1DB79 /* UILabel+jwExten.h */,
+				A957BCF51D912C1600D1DB79 /* UILabel+jwExten.m */,
 			);
 			name = jwTextFiled;
 			path = jwTextFiled/jwTextFiled;
+			sourceTree = "<group>";
+		};
+		425852AB2F8CBA003427C743 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F27172007B4E9CEF31F019AA /* Pods-jwTextFiled.debug.xcconfig */,
+				5ED9694ADD8A7618808AC772 /* Pods-jwTextFiled.release.xcconfig */,
+				3C320A8AE26184367036CB1A /* Pods-jwTextFiledTests.debug.xcconfig */,
+				689573C42B34DB2FED6ADF72 /* Pods-jwTextFiledTests.release.xcconfig */,
+				483EB1EC8648D8D8E8470D82 /* Pods-jwTextFiledUITests.debug.xcconfig */,
+				21D7D38269ED3498F7B96847 /* Pods-jwTextFiledUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A9E784781D9004A900F87D4B /* jwMacro */ = {
+			isa = PBXGroup;
+			children = (
+				A9E784791D9004A900F87D4B /* jw3RdMacro.h */,
+				A9E7847A1D9004A900F87D4B /* jwColorMacro.h */,
+				A9E7847B1D9004A900F87D4B /* jwDeveceMacro.h */,
+				A9E7847C1D9004A900F87D4B /* jwFontMacro.h */,
+				A9E7847D1D9004A900F87D4B /* jwFrameMacro.h */,
+				A9E7847E1D9004A900F87D4B /* jwMacro.h */,
+				A9E7847F1D9004A900F87D4B /* jwNetMacror.h */,
+				A9E784801D9004A900F87D4B /* jwTagMacro.h */,
+				A9E784811D9004A900F87D4B /* jwUiMacro.h */,
+				A9E784821D9004A900F87D4B /* jwUnitilsMacro.h */,
+				A9E784831D9004A900F87D4B /* UIColor+jwHex.h */,
+				A9E784841D9004A900F87D4B /* UIColor+jwHex.m */,
+			);
+			path = jwMacro;
+			sourceTree = "<group>";
+		};
+		AEE9A03BCD809532E13223EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BC03E87FA50ABEE48BD0AE8 /* libPods-jwTextFiled.a */,
+				AE404A97A3AF151A07607EA1 /* libPods-jwTextFiledTests.a */,
+				3F7A2B56D43DC96C4C3F4277 /* libPods-jwTextFiledUITests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,9 +265,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04F831541D8B47B200BA8BA9 /* Build configuration list for PBXNativeTarget "jwTextFiled" */;
 			buildPhases = (
+				7FA412B1C17493420D7BBB41 /* [CP] Check Pods Manifest.lock */,
 				04F831231D8B47B100BA8BA9 /* Sources */,
 				04F831241D8B47B100BA8BA9 /* Frameworks */,
 				04F831251D8B47B100BA8BA9 /* Resources */,
+				96D837DBF2A417E4E3229558 /* [CP] Embed Pods Frameworks */,
+				ECB99C0CB6DC3815055786AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,9 +285,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04F831571D8B47B200BA8BA9 /* Build configuration list for PBXNativeTarget "jwTextFiledTests" */;
 			buildPhases = (
+				3F3DDC2EC7395627C74D15DC /* [CP] Check Pods Manifest.lock */,
 				04F8313C1D8B47B200BA8BA9 /* Sources */,
 				04F8313D1D8B47B200BA8BA9 /* Frameworks */,
 				04F8313E1D8B47B200BA8BA9 /* Resources */,
+				4A785DBCDFFDDC78E52B5BF5 /* [CP] Embed Pods Frameworks */,
+				A4F6AB96327AF729E5613E93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,9 +306,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04F8315A1D8B47B200BA8BA9 /* Build configuration list for PBXNativeTarget "jwTextFiledUITests" */;
 			buildPhases = (
+				42A299E376F0FD9A7C58F80F /* [CP] Check Pods Manifest.lock */,
 				04F831471D8B47B200BA8BA9 /* Sources */,
 				04F831481D8B47B200BA8BA9 /* Frameworks */,
 				04F831491D8B47B200BA8BA9 /* Resources */,
+				45671FF13CBF5572ED032FB9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,7 +337,6 @@
 					};
 					04F8313F1D8B47B200BA8BA9 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = VJHLUPM383;
 						TestTargetID = 04F831261D8B47B100BA8BA9;
 					};
 					04F8314A1D8B47B200BA8BA9 = {
@@ -306,17 +394,143 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3F3DDC2EC7395627C74D15DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		42A299E376F0FD9A7C58F80F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		45671FF13CBF5572ED032FB9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jwTextFiledUITests/Pods-jwTextFiledUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A785DBCDFFDDC78E52B5BF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jwTextFiledTests/Pods-jwTextFiledTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FA412B1C17493420D7BBB41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		96D837DBF2A417E4E3229558 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jwTextFiled/Pods-jwTextFiled-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4F6AB96327AF729E5613E93 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jwTextFiledTests/Pods-jwTextFiledTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECB99C0CB6DC3815055786AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jwTextFiled/Pods-jwTextFiled-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04F831231D8B47B100BA8BA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9E784851D9004A900F87D4B /* UIColor+jwHex.m in Sources */,
 				048AEF2F1D8BFDE900B3359C /* AutoAttentionView.m in Sources */,
+				A957BCF31D912BF600D1DB79 /* CdView.m in Sources */,
 				04F831321D8B47B200BA8BA9 /* ViewController.m in Sources */,
 				04F8312F1D8B47B200BA8BA9 /* AppDelegate.m in Sources */,
 				04F8312C1D8B47B200BA8BA9 /* main.m in Sources */,
 				048AEF311D8BFDE900B3359C /* ZLAlertDialog.m in Sources */,
 				048AEF301D8BFDE900B3359C /* UITextField+Addtion.m in Sources */,
+				A957BCF61D912C1600D1DB79 /* UILabel+jwExten.m in Sources */,
 				A9C9D65F1D8EAED000B30D18 /* AddBankCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +670,7 @@
 		};
 		04F831551D8B47B200BA8BA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F27172007B4E9CEF31F019AA /* Pods-jwTextFiled.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -469,6 +684,7 @@
 		};
 		04F831561D8B47B200BA8BA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ED9694ADD8A7618808AC772 /* Pods-jwTextFiled.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -482,8 +698,10 @@
 		};
 		04F831581D8B47B200BA8BA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C320A8AE26184367036CB1A /* Pods-jwTextFiledTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = jwTextFiledTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jw-forever-is-now.jwTextFiledTests";
@@ -494,8 +712,10 @@
 		};
 		04F831591D8B47B200BA8BA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 689573C42B34DB2FED6ADF72 /* Pods-jwTextFiledTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = jwTextFiledTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jw-forever-is-now.jwTextFiledTests";
@@ -506,6 +726,7 @@
 		};
 		04F8315B1D8B47B200BA8BA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 483EB1EC8648D8D8E8470D82 /* Pods-jwTextFiledUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = jwTextFiledUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -518,6 +739,7 @@
 		};
 		04F8315C1D8B47B200BA8BA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21D7D38269ED3498F7B96847 /* Pods-jwTextFiledUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = jwTextFiledUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

@@ -278,7 +278,7 @@
  *
  * 在您使用此组件的过程中如果出现bug请及时告知QQ群主，我会及时修复bug并
  * 帮您解决问题。
- * 博客地址:
+ * 博客地址:http://www.jianshu.com/p/80ef2d47729d
  * Email : 2795041895@qq.com
  * GitHub:https://github.com/NIUXINGJIAN/OC_PLAYGROUND.git
  *

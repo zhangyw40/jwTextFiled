@@ -30,6 +30,7 @@
 #import "AutoAttentionView.h"
 #import "jwMacro.h"
 #import "ZLAlertDialog.h"
+#import "CdView.h"
 
 
 
