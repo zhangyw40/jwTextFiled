@@ -41,7 +41,7 @@ jwTextFiled 框架简单实现以下功能：
 ***手机号验证规则：
 注意事项请看注释部分。
 
-#2016-09-20日新增CD
+2016-09-20日新增CD
 
 CD使用实例
 
@@ -50,20 +50,25 @@ CD使用实例
 在 ViewDidLoad 方法里初始化：
 
 _cdView = [[CdVIew alloc] initWithFrame:CGRectMake(50, 50, 90, 40) addTarget:self action:@selector(changeCD:)];
+
 [self.view addSubview:_cdView];
+
 _cdView.layer.cornerRadius = 10;
+
 [_cdView setCd_count:60];
+
 [_cdView setCdLayer_cornerRadius:6];
+
 [_cdView setCdLayer_borderColor:[UIColor blackColor] borderWidth:1.0f];
-
-
 
 - (void)changeCD:(CdVIew*)cdview{
 
 [_cdView runCd];
+
 //... 请求网络方法
 
 NSLog(@"\n\n您点击了按钮，哈哈😝\n");
+
 }
 
 
