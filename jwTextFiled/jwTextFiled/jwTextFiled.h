@@ -27,11 +27,11 @@
 
 #import "UITextField+Addtion.h"
 #import <objc/runtime.h>
-#import "AutoAttentionView.h"
-#import "jwMacro.h"
-#import "ZLAlertDialog.h"
-#import "CdView.h"
-
+#import "AutoAttentionView.h"     // 黑框提示文件
+#import "jwMacro.h"               // 程序的所有宏文件
+#import "ZLAlertDialog.h"         // 多按钮的提示框
+#import "CdView.h"                // CD 发短信控件
+#import "UIPlaceholderTextView.h" //使用于意见反馈页面，填写多行自我介绍等
 
 
 

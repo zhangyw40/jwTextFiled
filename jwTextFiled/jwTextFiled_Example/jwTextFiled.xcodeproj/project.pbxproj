@@ -22,6 +22,7 @@
 		9B415F44D956E2E160DF2FB3 /* libPods-jwTextFiled.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC03E87FA50ABEE48BD0AE8 /* libPods-jwTextFiled.a */; };
 		A957BCF31D912BF600D1DB79 /* CdView.m in Sources */ = {isa = PBXBuildFile; fileRef = A957BCF21D912BF600D1DB79 /* CdView.m */; };
 		A957BCF61D912C1600D1DB79 /* UILabel+jwExten.m in Sources */ = {isa = PBXBuildFile; fileRef = A957BCF51D912C1600D1DB79 /* UILabel+jwExten.m */; };
+		A96296EB1DB84BC3000DEE53 /* UIPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A96296EA1DB84BC3000DEE53 /* UIPlaceholderTextView.m */; };
 		A9C9D65F1D8EAED000B30D18 /* AddBankCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C9D65D1D8EAED000B30D18 /* AddBankCardViewController.m */; };
 		A9C9D6601D8EAED000B30D18 /* AddBankCardViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C9D65E1D8EAED000B30D18 /* AddBankCardViewController.storyboard */; };
 		A9E784851D9004A900F87D4B /* UIColor+jwHex.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E784841D9004A900F87D4B /* UIColor+jwHex.m */; };
@@ -80,6 +81,8 @@
 		A957BCF21D912BF600D1DB79 /* CdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CdView.m; sourceTree = "<group>"; };
 		A957BCF41D912C1600D1DB79 /* UILabel+jwExten.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+jwExten.h"; sourceTree = "<group>"; };
 		A957BCF51D912C1600D1DB79 /* UILabel+jwExten.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+jwExten.m"; sourceTree = "<group>"; };
+		A96296E91DB84BC3000DEE53 /* UIPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceholderTextView.h; sourceTree = "<group>"; };
+		A96296EA1DB84BC3000DEE53 /* UIPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceholderTextView.m; sourceTree = "<group>"; };
 		A9C9D65C1D8EAED000B30D18 /* AddBankCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBankCardViewController.h; sourceTree = "<group>"; };
 		A9C9D65D1D8EAED000B30D18 /* AddBankCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBankCardViewController.m; sourceTree = "<group>"; };
 		A9C9D65E1D8EAED000B30D18 /* AddBankCardViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddBankCardViewController.storyboard; sourceTree = "<group>"; };
@@ -211,6 +214,8 @@
 				A957BCF21D912BF600D1DB79 /* CdView.m */,
 				A957BCF41D912C1600D1DB79 /* UILabel+jwExten.h */,
 				A957BCF51D912C1600D1DB79 /* UILabel+jwExten.m */,
+				A96296E91DB84BC3000DEE53 /* UIPlaceholderTextView.h */,
+				A96296EA1DB84BC3000DEE53 /* UIPlaceholderTextView.m */,
 			);
 			name = jwTextFiled;
 			path = jwTextFiled/jwTextFiled;
@@ -531,6 +536,7 @@
 				048AEF311D8BFDE900B3359C /* ZLAlertDialog.m in Sources */,
 				048AEF301D8BFDE900B3359C /* UITextField+Addtion.m in Sources */,
 				A957BCF61D912C1600D1DB79 /* UILabel+jwExten.m in Sources */,
+				A96296EB1DB84BC3000DEE53 /* UIPlaceholderTextView.m in Sources */,
 				A9C9D65F1D8EAED000B30D18 /* AddBankCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
