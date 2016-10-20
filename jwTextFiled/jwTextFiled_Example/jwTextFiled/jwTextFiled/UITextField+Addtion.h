@@ -176,6 +176,10 @@ typedef void(^AfterEnterBlock)(UITextField *TF,NSString *TF_STR);
  
  */
 
+#pragma mark—————— bug 说明
+/*
+ bug 说明：当前输入框不能用于汉字的输入框，没有及时修复，特此说明（2016-10-20）
+ */
 
 
 
