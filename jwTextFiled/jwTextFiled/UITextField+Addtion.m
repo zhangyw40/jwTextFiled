@@ -18,7 +18,7 @@
 // 内部实现对不同输入框的长度的限制初始化方法
  void  *key;
 -(void)setTextFiled_Type:(TEXTFIELD_TYPE)textFiled_Type{
-    objc_setAssociatedObject(self, key, [NSString stringWithFormat:@"%ld",(long)textFiled_Type], OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, key, [NSString stringWithFormat:@"%ld",(long)textFiled_Type], OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 - (TEXTFIELD_TYPE)textFiled_Type {
     id type = objc_getAssociatedObject(self, key);
