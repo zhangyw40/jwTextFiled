@@ -1,6 +1,6 @@
-# jwTextFiled 框架
+# jwTextFiled 
 
-jwTextFiled 框架简单实现以下功能：
+jwTextFiled 简单实现以下功能：
 
 0、在使用的地方仅仅 #import "jwTextFiled.h" 即可；博客说明使用场景请访问 http://www.jianshu.com/p/80ef2d47729d 。
 
@@ -14,6 +14,38 @@ jwTextFiled 框架简单实现以下功能：
 
 5、对输入框当前输入内容的回调，通过一次遍历，能够得到所有输入框及时的输入信息。  
 
+6、封装倒计时控件，采用target-action设计思想很好的解决了多次重发的问题。
+
+7、引入反馈页面使用的效果 UIPlaceholderTextView 文件。
+
+8、自动获取输入框的内容，能够帮助你做一些你想做的事情：效果如下 code
+
+    //如,短信验证码页面，初始化了jwTextFiled 设置后,当进入该页面后，自动获取验证码成功后，验证码输入框智能获取焦点，键盘出现，页面自动偏移，当输入够6位的时候，输入框取消焦点，键盘消失，页面回复原来位置。
+
+    -(void)intelligentSwitchInputBox:(BOOL)isOpen{
+
+    if (isOpen) {
+        
+        _smCode_TF.tempBlock = ^(UITextField *TF,NSString *TF_STR){
+            
+            if (TF == _smCode_TF) {// 验证码长度为6自动回收键盘
+                
+                if ( 6 == [TF_STR length] ) {
+                    
+                    [TF resignFirstResponder];
+                    [_scrolview setContentOffset:CGPointMake(0, 0) animated:YES];
+                    
+                }else{
+                    
+                    [TF becomeFirstResponder];
+                    [_scrolview setContentOffset:CGPointMake(0, 20 + 58) animated:YES];
+                    
+                }
+            }
+        };
+        
+    }
+    }
 
 #注意：
 
