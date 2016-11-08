@@ -2,6 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NEED</key>
+	<dict>
+		<key>New item - 2</key>
+		<string></string>
+		<key>New item - 3</key>
+		<string></string>
+		<key>New item - 4</key>
+		<string></string>
+		<key>New item - 5</key>
+		<string></string>
+		<key>New item - 6</key>
+		<string></string>
+		<key>New item</key>
+		<string>2016-10-28  PM 获取当前输入框的焦点状态</string>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

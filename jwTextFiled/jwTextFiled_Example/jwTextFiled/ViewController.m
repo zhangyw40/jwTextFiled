@@ -24,15 +24,21 @@
     // 初始化存放 tf 的数组
     _tfs_ary = @[_use_tf,_id_tf,_bankcard_tf,_pay_tf];
     // 校验提示文案数组
-    _titles_Ary = @[@"用户名不符合要求",@"请输入正确身份证号",@"请输入正确银行卡号",@"请输入正确金额",];
+    _titles_Ary = @[@"用户名不符合要求",
+                    @"请输入正确身份证号",
+                    @"请输入正确银行卡号",
+                    @"请输入正确金额",];
     // 空输入提示文案
-    _niltfs_Ary = @[@"用户名不能为空",@"身份证不能为空",@"银行卡不能为空",@"金额不能为空"];
+    _niltfs_Ary = @[@"用户名不能为空",
+                    @"身份证不能为空",
+                    @"银行卡不能为空",
+                    @"金额不能为空"];
     
     //设置约束样式
-    [_use_tf jwTextFiledType:TEXTFIELD_TYPE_LOGIN_U];
-    [_id_tf jwTextFiledType:TEXTFIELD_TYPE_IDCARD];
-    [_bankcard_tf jwTextFiledType:TEXTFIELD_TYPE_BANKRD];
-    [_pay_tf jwTextFiledType:TEXTFIELD_TYPE_PAYBOX];
+    [_use_tf jw_TextFiledType:TEXTFIELD_TYPE_LOGIN_U];
+    [_id_tf jw_TextFiledType:TEXTFIELD_TYPE_IDCARD];
+    [_bankcard_tf jw_TextFiledType:TEXTFIELD_TYPE_BANKRD];
+    [_pay_tf jw_TextFiledType:TEXTFIELD_TYPE_PAYBOX];
     
     // 及时检测
     for (UITextField *TF in _tfs_ary) {
@@ -59,7 +65,12 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     // 轮询校验
     // 如果要开启定位功能，最后一个参数为 @"YES"
-   BOOL is_ok = [_use_tf pollingCheckTextFiled:_tfs_ary isHaveBox:ISHAVE_BOX_TYPE_YES haveBoxTitles:_titles_Ary nullWarTitles:_niltfs_Ary withBoxType:WARING_BOX_TYPE_BLACKBX keepara:@"YES"];
+   BOOL is_ok = [_use_tf pollingCheckTextFiled:_tfs_ary
+                                     isHaveBox:ISHAVE_BOX_TYPE_YES
+                                 haveBoxTitles:_titles_Ary
+                                 nullWarTitles:_niltfs_Ary
+                                   withBoxType:WARING_BOX_TYPE_BLACKBX
+                                       keepara:@"YES"];
     
     if (!is_ok) {
         NSLog(@"\n\n所有的输入框都校验通过\n");

@@ -1,6 +1,6 @@
 //
 //  UITextField+Addtion.m
-//  HuJIn
+//  jwTextFiled
 //
 //  Created by Mac_NJW on 16/9/13.
 //  Copyright © 2016年 Mac_NJW. All rights reserved.
@@ -36,7 +36,7 @@
 
 
 // 外部实现调用
--(void)jwTextFiledType:(TEXTFIELD_TYPE)type{
+-(void)jw_TextFiledType:(TEXTFIELD_TYPE)type{
     
     // 设置动态属性
     [self setTextFiled_Type:type];
@@ -47,6 +47,169 @@
     // 设置代理
     [self setDelegate:(id)self];
 }
+
+// 输入达到最大的输入限度,自动的获取焦点方法
+- (void)jw_AutoGetFocusTfAry:(NSArray*)tfs start:(int)index{
+    
+    for (int i = index; i < [tfs count]; i++) {
+        
+        UITextField *tf = tfs[i];
+        tf.tempBlock = ^(UITextField *TF,NSString *STR){
+            
+            if ( [TF getInputLimit] != [STR length] ) {
+                
+                [TF becomeFirstResponder];
+                
+            }else{
+                
+                [TF resignFirstResponder];
+                
+                for (int j = 0; j < i; j++) {
+                    
+                    UITextField *t = tfs[j];
+                    if ( 0 == t.text.length) {
+                        
+                        [t becomeFirstResponder];
+                        return ;
+                        
+                    }else{
+                        
+                        if ([t getInputLimit] == [t.text length]) {
+                            
+                            [self jw_AutoGetFocusTfAry:tfs start:j];
+                        }
+                    }
+                }
+                
+                for (int k = i; k < [tfs count]; k++) {
+                    
+                    UITextField *h = tfs[k];
+                    if ( 0 == h.text.length) {
+                        
+                        [h becomeFirstResponder];
+                        return ;
+                        
+                    }else{
+                        
+                        if ([h getInputLimit] == [h.text length]) {
+                            
+                            [self jw_AutoGetFocusTfAry:tfs start:k];
+                        }
+                    }
+                }
+            }
+        };
+    }
+}
+
+
+// 得到输入框的长度限制
+-(NSInteger)getInputLimit{
+    
+    // 限制长度的临时值
+    NSInteger num = 0;
+    
+    switch (self.textFiled_Type) {
+            
+            // 用户名输入框 的限制
+        case TEXTFIELD_TYPE_LOGIN_U:
+            
+            num = K_LOGIN_U_LENGTH;
+            
+            //...
+            break;
+            
+            
+            // 用户登录密码框 的限制
+        case TEXTFIELD_TYPE_LOGIN_P:
+            
+            num = K_LOGIN_P_LENGTH;
+            //...
+            break;
+            
+            
+            // 验证码 输入框的限制
+        case TEXTFIELD_TYPE_SMCODE:
+            
+            num = K_SMCODE_LENGTH;
+            
+            //...
+            break;
+            
+            
+            // 金额 输入框的限制
+        case TEXTFIELD_TYPE_PAYBOX:
+            
+            num = K_PAYBOX_LENGTH;
+            
+            //...
+            break;
+            
+            
+            // 身份证 输入框的限制
+        case TEXTFIELD_TYPE_IDCARD:
+            
+            num = K_IDCARD_LENGTH;
+            
+            //...
+            break;
+            
+            
+            // 银行卡 输入框的限制
+        case TEXTFIELD_TYPE_BANKRD:
+            
+            num = K_BANKRD_LENGTH;
+            //...
+            break;
+            
+            
+            // 手机号 输入框的限制
+        case TEXTFIELD_TYPE_PHONE:
+            
+            num = K_PHONE_LENGTH;
+            //...
+            break;
+            
+            
+            // 邮箱 输入框的限制
+        case TEXTFIELD_TYPE_EMAIL:
+            
+            num = K_EMAIL_LENGTH;
+            //...
+            break;
+            
+            
+            // 信用卡有效期 输入框的限制
+        case TEXTFIELD_TYPE_CREDIT:
+            
+            num = K_CREDIT_LENGTH;
+            //...
+            break;
+            
+            
+            // 信用卡安全码 输入框的限制
+        case TEXTFIELD_TYPE_CRED_S:
+            
+            num = K_CREDIT_S_LENGTH;
+            //...
+            break;
+            
+            // 输入汉字
+        case TEXTFILED_TYPE_CHINESE:
+            
+            num = K_CHINESE_LENGTH;
+            //...
+            break;
+            
+            
+            
+        default:
+            break;
+    }
+    return num;
+    
+}
+
 
 - (void)setJW_KeyboardType:(TEXTFIELD_TYPE)textType{
     
@@ -129,6 +292,13 @@
         case TEXTFIELD_TYPE_CRED_S:
             
             [self setKeyboardType:UIKeyboardTypeNumberPad];
+            //...
+            break;
+            
+            // 输入汉字
+        case TEXTFILED_TYPE_CHINESE:
+            
+            [self setKeyboardType:UIKeyboardTypeDefault];
             //...
             break;
             
@@ -237,6 +407,12 @@
             //...
             break;
             
+            // 输入汉字 输入框的限制
+        case TEXTFILED_TYPE_CHINESE:
+            
+            num = K_CHINESE_LENGTH;
+            //...
+            break;
             
         default:
             break;
@@ -608,9 +784,6 @@
 
 
 
-
-
-
 #pragma amrk—————————————— 输入框的正则校验 ——————————————
 
 #pragma mark——————   判断银行卡卡号输入的合法性
@@ -632,35 +805,58 @@
     int lastNum = [[cardNo substringFromIndex:cardNoLength-1] intValue];
     
     cardNo = [cardNo substringToIndex:cardNoLength - 1];
+    
     for (int i = cardNoLength -1 ; i>=1;i--) {
+        
         NSString *tmpString = [cardNo substringWithRange:NSMakeRange(i-1, 1)];
+        
         int tmpVal = [tmpString intValue];
+        
         if (cardNoLength % 2 ==1 ) {
+            
             if((i % 2) == 0){
+                
                 tmpVal *= 2;
+                
                 if(tmpVal>=10)
+                    
                     tmpVal -= 9;
+                
                 evensum += tmpVal;
+                
             }else{
+                
                 oddsum += tmpVal;
             }
         }else{
+            
             if((i % 2) == 1){
+                
                 tmpVal *= 2;
+                
                 if(tmpVal>=10)
+                    
                     tmpVal -= 9;
+                
                 evensum += tmpVal;
+                
             }else{
+                
                 oddsum += tmpVal;
             }
         }
     }
     
     allsum = oddsum + evensum;
+    
     allsum += lastNum;
+    
     if((allsum % 10) == 0)
+        
         return YES;
+    
     else
+        
         return NO;
 }
 
@@ -672,6 +868,7 @@
     NSString *phoneNo = textFiled.text;
     
     if (nil == phoneNo) {
+        
         return NO;
     }
     
@@ -726,7 +923,9 @@
     
     //2016年06月30日，修正功能，对手机号不做号段判定、仅作手机号首位是1、其余位数是数字的判定
     NSString *newRegular = @"^1\\d{10}$";
+    
     NSPredicate *regularMobile =  [NSPredicate predicateWithFormat:@"SELF MATCHES %@", newRegular];
+    
     if ([regularMobile evaluateWithObject:phoneNo] == YES) {
         
         return  YES;
@@ -745,7 +944,9 @@
     NSString *e_mail = textFiled.text;
     
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    
     return [emailTest evaluateWithObject:e_mail];
     
 }
@@ -758,7 +959,9 @@
     NSString* passWord = textFiled.text;
     
     BOOL result = false;
+    
     if ([passWord length] >= 6){
+        
         //下面是按照标准的ASCII符号特殊字符集（保证任何手机都有）
         NSString * regex = @"^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,24}$";
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
@@ -770,6 +973,7 @@
     
     NSMutableArray *unSafeStr = [NSMutableArray array];
     if (!result) {
+        
         //如果某一个不存在的话，单独调处来
         for(int i =0; i < [passWord length]; i++)
         {
@@ -778,29 +982,42 @@
             NSString * regex = @"^(?![0-9]+$)|(?![a-zA-Z]+$)|[0-9A-Za-z-\\[\\]~`!@#$%^&*()_+=|}{:;'/?<>,.\"\\\\]{1,16}$";
             NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
             isOk = [pred evaluateWithObject:temp];
+            
             if (!isOk) {
+                
                 if ([temp isEqualToString:@" "]) {
+                    
                     temp = @"空格";
                 }
+                
                 [unSafeStr addObject:temp];
                 //NSLog(@"——找到的错误是%@",unSafeStr);
             }
         }
     }
+    
     if (0!=unSafeStr.count) {
+        
         NSSet *set = [NSSet setWithArray:unSafeStr];
         [unSafeStr removeAllObjects];
+        
         for (NSString *obj in set) {
+            
             [unSafeStr addObject:obj];
         }
+        
         // NSLog(@"数组是 %@",unSafeStr);
         NSString *tishi = @"检测密码不能包含非法字符：";
+        
         for (int i = 0; i<unSafeStr.count; i++) {
+            
             NSString *temp = unSafeStr[i];
             temp =  [temp stringByAppendingString:@"、"];
             tishi = [tishi stringByAppendingString:temp];
         }
+        
         tishi = [tishi substringWithRange:NSMakeRange(0, tishi.length - 1)];
+        
         //全局的提示框提示内容...这里可是显示一下
         NSLog(@"————————————%@",tishi);
     }
@@ -816,12 +1033,17 @@
     NSString *userName = textFiled.text;
 
     BOOL result = false;
+    
     if ([userName length] >= 6){
+        
         // 判断长度不小于6位后再接着判断是否同时包含数字和字符
         NSString * regex = @"^(?![0-9]+$)|(?![a-zA-Z]+$)|[0-9A-Za-z]{6,16}$";
+        
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+        
         result = [pred evaluateWithObject:userName];
     }
+    
     return result;
 }
 
@@ -833,13 +1055,18 @@
     NSString *smsCodeStr  = textFiled.text;
     
     BOOL result = false;
+    
     if ( 6 == [smsCodeStr length]){
+        
         //判断是不是6位数的验证码（0-9数字）
         // 判断长度大于8位后再接着判断是否同时包含数字和字符
         NSString * regex = @"^(\\d){6}$";
+        
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+        
         result = [pred evaluateWithObject:smsCodeStr];
     }
+    
     return result;
 }
 
@@ -852,44 +1079,68 @@
     NSString*idCardNum = textFiled.text;
     
     BOOL result = false;
+    
     NSString *regex = @"^(\\d){14}[0-9z-zA-Z]|(\\d){17}[0-9a-zA-Z]$";
+    
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+    
     result = [pred evaluateWithObject:idCardNum];
+    
     //如果是18位身份证号，就要验证其合法性
     if (idCardNum.length == 18) {
+        
         result = [self idCard_18_method:idCardNum];
+        
     }
+    
     if (idCardNum.length == 15) {
+        
         //暂无算法
     }
+    
     return result;
 }
 
 //idCard_18 校验算法
 - (BOOL)idCard_18_method:(NSString*)idcardStr{
+    
     BOOL isYes;
     isYes = NO;
+    
     //分别得到身份证的各个位数，存入数组中
     int s = 0;//加权求和值
     int y = 0;//计算模值
+    
     int wi[17] = {7 ,9 ,10 ,5 ,8 ,4 ,2 ,1 ,6 ,3 ,7 ,9 ,10 ,5 ,8 ,4 ,2 };//加权因子
+    
     NSString *l = [idcardStr substringWithRange:NSMakeRange(idcardStr.length - 1, 1)];
+    
     //加权和
     for (int i = 0; i < idcardStr.length - 1; i++) {
+        
         NSString *num = [idcardStr substringWithRange:NSMakeRange(i, 1)];
+        
         //转化为数字
         int b = [num intValue];
+        
         s += b*wi[i];
     }
+    
     //计算模
     y = s%11;
+    
     //匹配校验码数组
     int Y[11] = {0 ,1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 };
+    
     char YY[11] = {'1','0', 'X', '9','8', '7', '6', '5', '4', '3', '2'};
+    
     //匹配方法
     for (int k = 0; k < 11; k++) {
+        
         if (y == Y[k]) {
+            
             if ([[NSString stringWithFormat:@"%c",YY[k]] isEqualToString:l]) {
+                
                 isYes = YES;
             }
         }
@@ -900,55 +1151,84 @@
 
 #pragma mark———————— (正则)用户输入金额验证
 #define K_BANINPUT  @"限制金额的最后一位非小数点"
+
 // 金额验证第一步：（对小数点输入限制,且小数点后只能是两位数字）
 -(BOOL)isBoxCanInputNumberBoolMethod{
+    
     //判断如果输入一个小数点，后面只能输入两个数字多的输不了，如果输入小数点也不行
     NSString *tempstr = self.text;
     size_t length = [tempstr length];
+    
     int count_point = 0;//小数点的个数
+    
     BOOL isPoint_ok = YES ;//小数点的检测
+    
     for (size_t i=0; i < length; i++) {
+        
         unichar c = [tempstr characterAtIndex:i];
+        
         //是否是小数
         if (c == 0x2E ) {
+            
             // 自动补0
             if ( 0 == i) {
+                
                 NSString *tempzero = @"0";
                 self.text = [tempzero stringByAppendingString:self.text];
+                
             }
+            
             count_point++;
+            
             //小数点后禁止输入小数点
             if ( 2 == count_point) {
+                
                 self.text = [tempstr substringWithRange:NSMakeRange(0, length - 1)];
                 isPoint_ok = NO;//禁止输入第二个小数点
+                
             }else{
+                
                 isPoint_ok = YES;//只有一个小数点的时候，可以输入
             }
+            
             //小数位多于2位禁止输入
             if ( 2 <= (length-1 -i)) {
+                
                 isPoint_ok = NO;
                 self.text = [tempstr substringWithRange:NSMakeRange(0, i+ 3)];
+                
             }else{
+                
                 isPoint_ok = YES;
+                
             }
+            
             //最后一位禁止输入小数点
             if ( i == (K_PAYBOX_LENGTH -1)) {
+                
                 // 非iphone4s手机使用黑框提示
                 if (K_IS_IPHONE_4) {
                     
                     ALT_SHOW(K_TILTLE, K_BANINPUT, K_SURE)
+                    
                 }else{
                     
                     [[AutoAttentionView sharedInstance] autoShowAttentionWith:K_BANINPUT andWith:AX_KEY_WINDOW];
                 }
+                
                 self.text = [tempstr substringToIndex:i];
             }
+            
             //在输入框是否能输入的设置地方，只有 isPoint_ok = yes,才能输入否则禁止输入
         }
+        
         //0后面只能输入小数点，如果不是小数点，就禁止输入
         if ([tempstr characterAtIndex:0] == 48) {
+            
             if ([tempstr length] > 1) {//对第二个字符开始判断
+                
                 if ([tempstr characterAtIndex:1] >= 48) {
+                    
                     self.text = [self.text substringWithRange:NSMakeRange(0, length - 1)];
                     isPoint_ok = NO;//两个0，不可以输入
                 }
@@ -957,9 +1237,13 @@
     }
     
     if (isPoint_ok) {
+        
         NSLog(@" \n\n【金额输入框小数点限制】 （当前可以输入）您已经输入了 %@\n",self.text);
+        
     }else{
+        
         NSLog(@" \n\n【金额输入框小数点限制】 （当前禁止输入）您已经输入了 %@\n",self.text);
+        
     }
     
     return  isPoint_ok;
@@ -973,11 +1257,16 @@
     
     BOOL result = false;
     if ([money length] > 0){
+        
         // 判断是否是整数或者有不超过两位的小数
         NSString * regex = @"^(([0-9]|([1-9][0-9]{0,9}))((\\.[0-9]{1,2})?))$";
+        
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+        
         result = [pred evaluateWithObject:money];
+        
     }
+    
     return result;
 }
 
@@ -989,12 +1278,17 @@
     NSString*safeCodeNum = textFiled.text;
     
     BOOL result = false;
+    
     if ([safeCodeNum length] == 3) {
+        
         //判断信用卡是否位数够 （YES 位数 3 位）
         NSString *regex = @"^[0-9]{3}$";
+        
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+        
         result = [pred evaluateWithObject:safeCodeNum];
     }
+    
     return result;
 }
 
@@ -1005,10 +1299,14 @@
     NSString *timeNum = textFiled.text;
     
     BOOL result = false;
+    
     if ([timeNum length] == 4) {
+        
         //是否是正确的有效期 （YES 位数 4 位）
         NSString *regex =@"^[0-9]{4}$";
+        
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+        
         result = [pred evaluateWithObject:timeNum];
     }
     

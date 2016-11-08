@@ -1,6 +1,6 @@
 //
 //  UITextField+Addtion.h
-//  HuJIn
+//  jwTextFiled
 //
 //  Created by Mac_NJW on 16/9/13.
 //  Copyright © 2016年 Mac_NJW. All rights reserved.
@@ -39,6 +39,8 @@
  //信用卡的安全码 限制
 #define K_CREDIT_S_LENGTH    3
 
+//标准的汉字键盘 限制
+#define K_CHINESE_LENGTH    30
 
 // 输入框的类别设计
 typedef NS_ENUM(NSInteger,TEXTFIELD_TYPE) {
@@ -53,7 +55,7 @@ typedef NS_ENUM(NSInteger,TEXTFIELD_TYPE) {
     TEXTFIELD_TYPE_EMAIL,  //邮箱输入框
     TEXTFIELD_TYPE_CREDIT, //信用卡有效期输入框
     TEXTFIELD_TYPE_CRED_S, //信用卡安全码输入框
-    
+    TEXTFILED_TYPE_CHINESE,//普通的汉字输入框
 };
 
 
@@ -88,7 +90,10 @@ typedef void(^AfterEnterBlock)(UITextField *TF,NSString *TF_STR);
 @property (nonatomic,copy)AfterEnterBlock tempBlock;
 
 // 内部实现对不同输入框的长度的限制 (外部调用设置)
-- (void)jwTextFiledType:(TEXTFIELD_TYPE)type;
+- (void)jw_TextFiledType:(TEXTFIELD_TYPE)type;
+
+// 输入达到最大的输入限度,自动的获取焦点方法(index 就是要获取焦点的输入框下标)
+- (void)jw_AutoGetFocusTfAry:(NSArray*)tfs start:(int)index;
 
 /**
  *  轮询检验方法

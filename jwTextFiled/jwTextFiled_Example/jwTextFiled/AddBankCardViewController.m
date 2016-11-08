@@ -44,10 +44,10 @@
     // 及时监听输入内容
      _tfAry = @[_hold_Name_TF,_idCard_TF,_bankCardNo_TF,_phone_TF];
     // 设置类型
-    [_hold_Name_TF jwTextFiledType:TEXTFIELD_TYPE_LOGIN_U];
-    [_idCard_TF jwTextFiledType:TEXTFIELD_TYPE_IDCARD];
-    [_bankCardNo_TF jwTextFiledType:TEXTFIELD_TYPE_BANKRD];
-    [_phone_TF jwTextFiledType:TEXTFIELD_TYPE_PHONE];
+    [_hold_Name_TF jw_TextFiledType:TEXTFIELD_TYPE_LOGIN_U];
+    [_idCard_TF jw_TextFiledType:TEXTFIELD_TYPE_IDCARD];
+    [_bankCardNo_TF jw_TextFiledType:TEXTFIELD_TYPE_BANKRD];
+    [_phone_TF jw_TextFiledType:TEXTFIELD_TYPE_PHONE];
     
     
     for (UITextField *textFiled in _tfAry) {
@@ -73,10 +73,27 @@
 - (IBAction)nextBtnClickAct:(UIButton *)sender {
     
     // 轮询校验
-    _tfAry = @[_hold_Name_TF,_idCard_TF,_bankCardNo_TF,_phone_TF];
-    NSArray *_errorAry = @[K_ERROR_HOLDNAME,K_ERROR_IDCARD,K_ERROR_BANKCARD,K_ERROR_PHONENUM];
-    NSArray *_nilAry = @[K_NULL_HOLDNAME,K_NULL_IDCARD,K_NULL_BANKCARD,K_NULL_PHONENUM];
-    BOOL is_ok = [_hold_Name_TF pollingCheckTextFiled:_tfAry isHaveBox:ISHAVE_BOX_TYPE_YES haveBoxTitles:_errorAry nullWarTitles:_nilAry withBoxType:WARING_BOX_TYPE_BLACKBX keepara:@"YES"];// 如果是 @"YES" 就是开启错误定位
+    _tfAry = @[_hold_Name_TF,
+               _idCard_TF,
+               _bankCardNo_TF,
+               _phone_TF];
+    
+    NSArray *_errorAry = @[K_ERROR_HOLDNAME,
+                           K_ERROR_IDCARD,
+                           K_ERROR_BANKCARD,
+                           K_ERROR_PHONENUM];
+    
+    NSArray *_nilAry = @[K_NULL_HOLDNAME,
+                         K_NULL_IDCARD,
+                         K_NULL_BANKCARD,
+                         K_NULL_PHONENUM];
+    
+    BOOL is_ok = [_hold_Name_TF pollingCheckTextFiled:_tfAry
+                                            isHaveBox:ISHAVE_BOX_TYPE_YES
+                                        haveBoxTitles:_errorAry
+                                        nullWarTitles:_nilAry
+                                          withBoxType:WARING_BOX_TYPE_BLACKBX
+                                              keepara:@"YES"];// 如果是 @"YES" 就是开启错误定位
     if (is_ok) {
         
         NSLog(@"\n\n 所有输入合法，可以继续执行逻辑!\n");
