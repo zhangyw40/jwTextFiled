@@ -49,7 +49,14 @@
 }
 
 // 输入达到最大的输入限度,自动的获取焦点方法
-- (void)jw_AutoGetFocusTfAry:(NSArray*)tfs start:(int)index{
+- (void)jw_AutoGetFocusTfAry:(NSArray*)tfs index:(int)index{
+    
+    BOOL isSafe = ((index < 0) || (index >= (int)[tfs count]))?YES:NO;
+    
+    if (!isSafe) {
+        
+        index = 0;
+    }
     
     for (int i = index; i < [tfs count]; i++) {
         
@@ -76,7 +83,7 @@
                         
                         if ([t getInputLimit] == [t.text length]) {
                             
-                            [self jw_AutoGetFocusTfAry:tfs start:j];
+                            [self jw_AutoGetFocusTfAry:tfs index:j];
                         }
                     }
                 }
@@ -93,7 +100,7 @@
                         
                         if ([h getInputLimit] == [h.text length]) {
                             
-                            [self jw_AutoGetFocusTfAry:tfs start:k];
+                            [self jw_AutoGetFocusTfAry:tfs index:k];
                         }
                     }
                 }
@@ -200,8 +207,6 @@
             num = K_CHINESE_LENGTH;
             //...
             break;
-            
-            
             
         default:
             break;

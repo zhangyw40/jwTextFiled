@@ -93,7 +93,7 @@ typedef void(^AfterEnterBlock)(UITextField *TF,NSString *TF_STR);
 - (void)jw_TextFiledType:(TEXTFIELD_TYPE)type;
 
 // 输入达到最大的输入限度,自动的获取焦点方法(index 就是要获取焦点的输入框下标)
-- (void)jw_AutoGetFocusTfAry:(NSArray*)tfs start:(int)index;
+- (void)jw_AutoGetFocusTfAry:(NSArray*)tfs index:(int)index;
 
 /**
  *  轮询检验方法
